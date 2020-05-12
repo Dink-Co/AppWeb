@@ -1,4 +1,4 @@
-/*Inicio Estilosd del Header*/
+/*Inicio Estilos ddel Header*/
 
 *{
   margin: 0;
@@ -10,6 +10,8 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 
+
+
 .grid{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -20,6 +22,32 @@ body{
   gap: 20px;
   overflow: hidden;
   align-items: center;
+}
+
+
+
+.link-Language{
+  grid-column: 7/8;
+  font-size: 21px;
+}
+
+.link-Pricing{
+  grid-column: 8/9;
+  font-size: 21px;
+}
+
+.link-login{
+  grid-column: 9/11;
+  font-size: 21px;
+}
+
+.link-signup{
+  grid-column: 11/12;
+  font-size: 21px;
+  background-color: #ff9C33;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5%;
 }
 
 .weight-400{
@@ -35,7 +63,7 @@ body{
 }
 
 .header{
-  height: 500px;
+  height: 200px;
 }
 
 .img-hero{
