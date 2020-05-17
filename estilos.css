@@ -32,13 +32,16 @@ nav{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
 }
 
 nav li{
   display: flex;
   list-style: none;
   font-size: 20px;
+}
+nav li a{
+  text-decoration: none;
+  color: #000;
 }
 
 .link-signup{
