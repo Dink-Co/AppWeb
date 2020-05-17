@@ -1,7 +1,7 @@
 /*Inicio Estilos ddel Header*/
 
 *{
-  margin: 0;
+  margin: 1px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -9,7 +9,6 @@
 body{
   font-family: 'Raleway', sans-serif;
 }
-
 
 
 .grid{
@@ -24,25 +23,25 @@ body{
   align-items: center;
 }
 
-
-
-.link-Language{
-  grid-column: 7/8;
-  font-size: 21px;
+/**Estilos Header**/
+.header{
+  height: 100px;
 }
 
-.link-Pricing{
-  grid-column: 8/9;
-  font-size: 21px;
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
 
-.link-login{
-  grid-column: 9/11;
-  font-size: 21px;
+nav li{
+  display: flex;
+  list-style: none;
+  font-size: 20px;
 }
 
 .link-signup{
-  grid-column: 11/12;
   font-size: 21px;
   background-color: #ff9C33;
   color: #fff;
@@ -62,9 +61,7 @@ body{
   margin-bottom: 20px;
 }
 
-.header{
-  height: 200px;
-}
+/**Sección hero**/
 
 .img-hero{
   width: 100%;
@@ -101,9 +98,14 @@ body{
 /*Inicio Estilos de la sección Services*/
 
 .services{
-  height: 370px;
-  background: linear-gradient(180deg, rgb(255, 255, 255) 50%, rgb(38, 128, 231) 50%);
+  height: 490px;
+  background:  rgb(255, 255, 255) ;
 }
+
+.section-1 .section-2{
+  margin: 1px;
+  }
+
 
 .items{
   grid-column: 1/-1;
@@ -125,54 +127,49 @@ body{
   text-align: center;
 }
 
-[class^="far fa"]{
-  font-size: 50px;
-  text-align:center;
-}
 
 .titulo-services{
   margin: 20px;
 }
 
-.about-us{
-background: rgb(38, 128, 231);
-color: #fff;
-height: auto;
-padding-bottom: 60px;
-}
 
-.textos-about-us{
-  grid-column: 1/-1;
-  text-align: center;
-}
+/**References section**/
 
-.textos-about-us .parrafo{
-  color: aqua;
-  margin-top: 15px;  
-}
-
-.numbers{
-  grid-column: 1/-1;
+.references{
+  margin: 10%;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
+
+.references-items{
+  text-align: center;
+  top: 1195px;
+left: 907px;
+width: 239px;
+height: 184px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #000000B8;
+opacity: 1;
+}
+
+.references-items .img-items{
+  margin: 0;
+}
+/****/
+
+.contact-us{
+background: rgb(38, 128, 231);
+color: #fff;
+height: 150px;
+}
+
+.text-contact-us{
+  grid-column: 5/9;
+}
+
 
 /*Mission*/
-
-.mission{
-  padding: 80px;
-}
-
-.textos-mission{
-  grid-column: 7/13;
-  grid-row: 1/-1;
-  margin-bottom: 20px;
-}
-
-.img-mission{
-  grid-column: 1/7;
-  grid-row: 1/-1;
-}
 
 /*Footer*/
 
