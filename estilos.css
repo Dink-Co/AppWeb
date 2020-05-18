@@ -1,15 +1,22 @@
-/*Inicio Estilos ddel Header*/
+/*Inicio Estilos del Header*/
 
 *{
   margin: 1px;
   padding: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
+
+
 
 body{
   font-family: 'Raleway', sans-serif;
 }
 
+a{
+  cursor: pointer;
+}
 
 .grid{
   display: grid;
@@ -101,12 +108,14 @@ nav li a{
 /*Inicio Estilos de la sección Services*/
 
 .services{
-  height: 490px;
+  height: 590px;
+  margin-top: 100px;
   background:  rgb(255, 255, 255) ;
 }
 
-.section-1 .section-2{
-  margin: 1px;
+.section-1, .section-2{
+  margin: 20px 0px 20px 0px;
+  padding-top: 15px;
   }
 
 
@@ -138,41 +147,146 @@ nav li a{
 
 /**References section**/
 
-.references{
-  margin: 10%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+
+#i1, #i2, #i3, #i4, #i5{ display: none;}
+.container{
+		margin: 0 auto;
+		margin-top: 20px;
+		position: relative;
+		width: 70%;
+		height: 0;
+		padding-bottom: 38%;
+	  user-select: none;
+		background-color: white;
+		border: solid 10px white;
+		border-radius:10px ; 
+	}
+
+	.container .slide_img{
+		position: absolute;
+		width: 100%;
+    height: 90%;
+    text-align: center;
+	}
+	.container .slide_img img{
+		width: inherit;
+		height: inherit;
+  }
+  
+  .container .slide_img h1{
+    font-size: 34px;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+	 .prev, .next{
+		width: 12%;
+		height: inherit;
+		position: absolute;
+		top:0; 
+		background-color: white;
+		color:rgba(244, 244, 244,.9);
+		z-index: 99;
+		transition: .45s;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.next{right:0;}
+	.prev{left:0;}
+
+	label span{
+		position: absolute;
+		font-size: 100pt;
+		top: 50%;
+	 	transform: translateY(-50%);
+	}
+
+	.prev:hover, .next:hover{
+		transition: .3s;
+		background-color: white;
+		color: #ffffff; 
+	}
+
+.container #nav_slide{
+	width: 100%;
+	bottom: 12%;
+	height: 11px;
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+	cursor: default;
 }
 
-.references-items{
-  text-align: center;
-  top: 1195px;
-left: 907px;
-width: 239px;
-height: 184px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-box-shadow: 0px 3px 6px #000000B8;
-opacity: 1;
+#nav_slide .dots{
+	top: -5px;
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: white;
+	transition: .4s;
 }
 
-.references-items .img-items{
-  margin: 0;
-}
-/****/
-
-.contact-us{
-background: rgb(38, 128, 231);
-color: #fff;
-height: 150px;
+#nav_slide .dots:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.9);
+	transition: .25s
 }
 
-.text-contact-us{
-  grid-column: 5/9;
+.slide_img{z-index: -1;}
+
+	#i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five 
+	{z-index: 9; animation: scroll 1s ease-in-out;}
+
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4,
+	#i5:checked  ~  #nav_slide #dot5
+	{ background-color: rgba(255,255,255,.9);}
+
+@keyframes scroll{
+	0%{	opacity:.0;}
+	100%{opacity:1;}
+}		
+
+/* .yt{
+	margin: 0 auto;
+	margin-top: 50px;
+	position: relative;
+	width: 150px;
+	height:50px;
+	border: outset #2c2c2c 4px;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 30pt;
+	transition: .5s;
 }
 
+.yt a{
+	text-decoration: none;
+	color: #4c4c4c;
+	transition: .5s;
+}
 
-/*Mission*/
+.yt:hover{
+	background: #4c4c4c;
+	transition: .3s;
+}
+
+.yt:hover a{
+	color: #fff;
+	transition: .3s;
+}
+ */
+
 
 /*Footer*/
 
@@ -213,3 +327,49 @@ footer{
     font-size: 14px;
   }
 } 
+
+
+@media screen and (max-width: 685px){
+
+  .services, .section-2{
+    display: list-item;
+  }
+	.container{
+		border: none;
+		width: 100%;
+		height: 0;
+		padding-bottom: 55%; 
+	}	
+	
+	label span { font-size: 50pt; }
+	
+	.prev, .next{
+		width: 15%;
+	}	
+	#nav_slide .dots{
+		width: 12px;
+		height: 12px;
+  }
+  .me{ display: none;}
+}
+
+
+
+.references .text-box{
+ 
+  color: #000;
+  
+
+}
+
+
+@media screen  and(min-width: 970px){
+	.me{ display: none;}
+}
+
+
+
+.references .text-box{
+ 
+  color: #000;
+}
