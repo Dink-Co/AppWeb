@@ -159,13 +159,13 @@ nav li a{
 		padding-bottom: 38%;
 	  user-select: none;
 		background-color: white;
-		border: solid 10px white;
-		border-radius:10px ; 
+		border: solid 1px white;
+		border-radius:1px ; 
 	}
 
 	.container .slide_img{
 		position: absolute;
-		width: 100%;
+		width: 80%;
     height: 90%;
     text-align: center;
 	}
@@ -298,6 +298,8 @@ footer{
   padding: 40px 0;
 }
 
+
+
 .textos-footer{
   grid-column: 1/-1;
 }
@@ -354,9 +356,11 @@ footer{
   .img{
     max-width: 170px;
   }
+
   .grid{
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
   }
+
   .item{
     width: 100%;
     flex-shrink: 0;
