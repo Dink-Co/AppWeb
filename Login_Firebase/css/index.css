@@ -1,0 +1,30 @@
+.container{
+    left: 30%;
+    top: 300px;
+    right: 10px;
+    position: relative;
+    background-color: bisque;
+    width: 600px;
+    height: 300px;
+    
+    
+}
+
+.registro{
+    margin-top: 30px;
+    margin-left: 80px;
+
+
+}
+
+.inicio{
+    
+    margin-top: 30px;
+    margin-left: 80px;
+
+
+}
+
+input{
+    
+}

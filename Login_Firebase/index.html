@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>registro</title>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="js/divs.js"></script>
+	<script>
+        // TODO: Replace the following with your app's Firebase project configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDT1--v4Qz3zvXivTmtBDecygHrTOliYX8",
+            authDomain: "dinkcolombia.firebaseapp.com",
+                databaseURL: "https://dinkcolombia.firebaseio.com",
+            projectId: "dinkcolombia",
+            storageBucket: "dinkcolombia.appspot.com",
+            messagingSenderId: "688656075697",
+            appId: "1:688656075697:web:125629a86246f813d84b90",
+            measurementId: "G-MQ6E6NZB8J"
+    
+          // ...
+        };
+    
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+      <script src="js/config.js"></script>
+
+</head>
+<body>
+    
+    <div class="container">
+        <button type="button" onclick="inicio()">Iniciar sesion </button>
+        <button type="button" onclick="registro()">Registrarse </button>
+        <div class="registro" id="registro">
+            <h3>Registro de Usuarios</h3>
+            <input type="text" id="email" placeholder="corrreo">
+            <br>
+            <input type="password" id="password" placeholder="password">
+            <br>
+            <button type="button" onclick="registrar()">Registrar</button>
+        </div>
+
+        <div class="inicio" id="inicio" style="display: none;">
+            <h3>Ingreso de Usuarios</h3>
+            <input type="text" id="email2" placeholder="corrreo">
+            <br>
+            <input type="password" id="password2" placeholder="password">
+            <br>
+            <button type="button" onclick="ingresar()">Ingresar</button>
+        </div>
+    </div>
+
+    
+    <div id="contenido">
+        
+    </div>
+    
+</body>
+</html>
+

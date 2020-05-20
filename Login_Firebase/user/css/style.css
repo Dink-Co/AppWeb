@@ -1,0 +1,242 @@
+/*------Variables-------*/
+:root{
+    --orange-color-ligth:#FF9C33; 
+    --nav-text-color:rgb(38, 62, 168);
+
+}
+
+
+/*
+    ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :)
+*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.9em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    /*background: var(--orange-color-ligth);*/
+    color: var(--nav-text-color);
+    transition: all 0.3s;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000045;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 90px 20px;
+}
+
+#sidebar .sidebar-header h1{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-size: 19px;
+    height: 50px;
+    background-color: var(--orange-color-ligth);
+    box-shadow: -1px 3px 9px #00000029;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--orange-color-ligth);
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: var(--orange-color-ligth);
+    background: #fff;
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: var(--orange-color-ligth);
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar{
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+
+
+/*Shriking the sidebar from 250px to 80px and center aligning its content*/
+
+
+#sidebar.active{
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+
+/*Toggling the sidebar header content, hide the big heading [h3] and showing the small heading [strong and vice versa]*/
+
+#sidebar.active .sidebar-header h3{
+    display: none;
+}
+
+#sidebar.active .sidebar-header strong{
+    display: block;
+}
+
+#sidebar ul li a{
+    text-align: left;
+}
+
+#sidebar.active ul li a i{
+    margin-right: 0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+/*Same dropdown links padding*/
+#sidebar.active ul ul a{
+    padding: 10px !important;
+}
+
+.top-nav{
+    height: 50px;
+}
+
+.content{
+    width: 100%;
+}
+
+.content .data-box{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 25px 100px;
+    width: 100%;
+   
+}
+
+.inputs-values{
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px ;
+    border-color: #fff;
+    width: 240px;
+    height: 150px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 8px;
+}
+
+.inputs-values h1{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.inputs-values-add{
+    font-size: 16px;
+    text-align: center;
+    }
+
+
+
+
+
+@media (max-width: 768px) {
+    /* 80px and its content aligned to centre. Pushing it off the screen with the
+       negative left margin
+    */
+    #sidebar.active {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+    }
+
+
+    /* Reappearing the sidebar on toggle button click */
+    #sidebar {
+        margin-left: 0; 
+    }
+
+
+    /* Toggling the sidebar header content, 
+       hide the big heading [h3] and showing the small heading [strong] and vice versa
+    */
+    #sidebar .sidebar-header strong {
+        display: none;
+    }
+    #sidebar.active .sidebar-header h3 {
+        display: none;
+    }
+    #sidebar.active .sidebar-header strong {
+        display: block;
+    }
+
+    /* Downsize the navigation links font size */
+    #sidebar.active ul li a {
+        padding: 20px 10px;
+        font-size: 0.85em;
+    }
+
+    #sidebar.active ul li a i {
+        margin-right:  0;
+        display: block;
+        font-size: 1.8em;
+        margin-bottom: 5px;
+    }
+
+    /* Adjust the dropdown links padding*/
+    #sidebar.active ul ul a {
+        padding: 10px !important;
+    }
+
+    /* Changing the arrow position to bottom center position, 
+      translateX(50%) works with right: 50% 
+      to accurately  center the arrow */
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+}
